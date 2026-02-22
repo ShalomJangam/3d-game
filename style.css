@@ -6,8 +6,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: #111;
-  color: #f6f7f8;
+  background: radial-gradient(circle at top, #22314d, #080c14 60%);
+  color: #ecf2ff;
 }
 
 #game {
@@ -21,25 +21,32 @@ body {
   top: 1rem;
   left: 1rem;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  backdrop-filter: blur(4px);
-  max-width: 24rem;
+  background: linear-gradient(145deg, rgba(12, 17, 28, 0.82), rgba(7, 11, 20, 0.74));
+  border: 1px solid rgba(155, 187, 255, 0.35);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  backdrop-filter: blur(6px);
+  max-width: 30rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 #hud h1 {
-  margin: 0 0 0.4rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
 }
 
 #hud p {
-  margin: 0.2rem 0;
-  font-size: 0.92rem;
+  margin: 0.22rem 0;
+  font-size: 0.9rem;
 }
 
 #status {
-  color: #ffe380;
-  font-weight: 600;
+  color: #ffd772;
+  font-weight: 700;
+}
+
+.controls {
+  color: #9ac2ff;
+  font-size: 0.82rem !important;
 }

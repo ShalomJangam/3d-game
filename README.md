@@ -1,6 +1,14 @@
-# 3D Car Game
+# Open Road Racer (3D)
 
-A lightweight browser-based 3D car game built with Three.js.
+A browser-based 3D driving game inspired by arcade highway racers.
+
+## Features
+
+- Free steering + acceleration/braking (not just lane switching)
+- Nitro boost system
+- Endless streamed world chunks for exploration-like long runs
+- Dynamic traffic cars, near-miss tracking, and collision game-over
+- Procedural roadside scenery (trees + buildings)
 
 ## Run locally
 
@@ -8,12 +16,13 @@ A lightweight browser-based 3D car game built with Three.js.
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173` in your browser.
+Open `http://localhost:4173`.
 
 ## Controls
 
-- `←` / `A`: move left
-- `→` / `D`: move right
-- `Space`: start/restart after crash
-
-Avoid oncoming red cars to keep scoring points.
+- `W` / `↑`: accelerate
+- `S` / `↓`: brake
+- `A` / `←`: steer left
+- `D` / `→`: steer right
+- `Shift`: nitro boost
+- `Space`: start/restart
