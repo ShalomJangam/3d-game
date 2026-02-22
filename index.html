@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Open Road Racer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <h1>Open Road Racer</h1>
+    <p>Arcade highway runner with exploration-style endless world streaming.</p>
+    <p>Speed: <span id="speed">0</span> km/h</p>
+    <p>Distance: <span id="distance">0.00</span> km</p>
+    <p>Near misses: <span id="score">0</span></p>
+    <p>Nitro: <span id="nitro">100</span>%</p>
+    <p id="status">Press Space to start</p>
+    <p class="controls">W/S accelerate & brake • A/D steer • Shift nitro • Space restart</p>
+  </div>
+  <canvas id="game"></canvas>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
