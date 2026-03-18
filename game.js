@@ -8,6 +8,9 @@ const nitroEl = document.getElementById("nitro");
 const nitroBar = document.getElementById("nitro-bar");
 const statusEl = document.getElementById("status");
 
+// Speed conversion: internal units → km/h display value
+const SPEED_DISPLAY_MULTIPLIER = 3.1;
+
 // ── Renderer ────────────────────────────────────────────────
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -493,7 +496,7 @@ function resetGame() {
   for (const t of trafficCars) scene.remove(t);
   trafficCars.length = 0;
 
-  statusEl.textContent = "DRIVE! THREAD TRAFFIC.";
+  statusEl.textContent = "DRIVE! WEAVE THROUGH TRAFFIC.";
   statusEl.classList.remove("crashed");
   speedEl.textContent = "0";
   distanceEl.textContent = "0.00";
@@ -589,7 +592,7 @@ function updateTraffic(delta) {
 
 // ── HUD update ────────────────────────────────────────────────
 function updateHUD() {
-  speedEl.textContent = Math.round(sim.speed * 3.1).toString();
+  speedEl.textContent = Math.round(sim.speed * SPEED_DISPLAY_MULTIPLIER).toString();
   distanceEl.textContent = sim.distance.toFixed(2);
   scoreEl.textContent = sim.nearMisses.toString();
   const n = Math.round(sim.nitro);
