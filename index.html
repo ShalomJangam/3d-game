@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON DRIVE — Synthwave Racer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div id="hud-title">NEON DRIVE</div>
+    <div id="hud-stats">
+      <div class="stat-block">
+        <span class="stat-label">SPEED</span>
+        <span class="stat-value" id="speed">0</span>
+        <span class="stat-unit">km/h</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label">DIST</span>
+        <span class="stat-value" id="distance">0.00</span>
+        <span class="stat-unit">km</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label">SCORE</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+    </div>
+    <div id="nitro-bar-wrap">
+      <span class="stat-label">NITRO</span>
+      <div id="nitro-track">
+        <div id="nitro-bar"></div>
+      </div>
+      <span id="nitro" class="stat-unit">100%</span>
+    </div>
+    <div id="status">PRESS SPACE TO START</div>
+    <div id="controls-hint">W/S · A/D · SHIFT=NITRO · SPACE=RESTART</div>
+  </div>
+
+  <canvas id="game"></canvas>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
